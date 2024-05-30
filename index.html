@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hang Out with Gavin</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-top: 50px;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            overflow: hidden;
+        }
+
+        .cooper {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .cooper:hover {
+            transform: scale(1.2);
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .move {
+            animation: move 10s infinite linear;
+        }
+
+        @keyframes move {
+            0% { top: 0; left: 0; }
+            25% { top: 0; left: calc(100% - 100px); }
+            50% { top: calc(100% - 100px); left: calc(100% - 100px); }
+            75% { top: calc(100% - 100px); left: 0; }
+            100% { top: 0; left: 0; }
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>You've been selected to hang out with Gavin, please click on a Cooper to choose your adventure.</h1>
+    <div class="container">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSceD9IS-kb2eiSqWKYuBlc0wVj21nC9n2vgRvlVfY8FsSCY0g/viewform?usp=sf_link" target="_blank">
+            <img src="https://github.com/grudman1/DateNight/blob/main/Cooper1.png?raw=true" class="cooper move bounce" alt="Cooper 1">
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSceD9IS-kb2eiSqWKYuBlc0wVj21nC9n2vgRvlVfY8FsSCY0g/viewform?usp=sf_link" target="_blank">
+            <img src="https://github.com/grudman1/DateNight/blob/main/Cooper2.png?raw=true" class="cooper move bounce" alt="Cooper 2">
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSceD9IS-kb2eiSqWKYuBlc0wVj21nC9n2vgRvlVfY8FsSCY0g/viewform?usp=sf_link" target="_blank">
+            <img src="https://github.com/grudman1/DateNight/blob/main/Cooper3.png?raw=true" class="cooper move bounce" alt="Cooper 3">
+        </a>
+    </div>
+</body>
+</html>
